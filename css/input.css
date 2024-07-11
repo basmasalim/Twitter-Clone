@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .link-active{
+        @apply flex items-center justify-center lg:justify-start text-dim-100
+    }
+    .link{
+        @apply flex justify-center mb-6 text-gray-800 lg:justify-start dark:text-white
+         hover:text-dim-100 transition-[0.5s] duration-300 ease-in-out dark:hover:text-dim-100
+    }
+    .icon{
+        @apply hidden font-bold capitalize lg:block lg:ml-4
+    }
+    .post-icon{
+        @apply flex items-center text-sm text-gray-400 dark:text-white
+    }
+    .tweets{
+        @apply py-2 text-sm text-center capitalize bg-white border border-gray-300 cursor-pointer dark:bg-dim-900 dark:border-dim-200 text-dim-100
+    }
+    .font-sm{
+        @apply sm:text-sm text-[13px]
+    }
+}
+
+@layer utilities{
+    /* width */
+    ::-webkit-scrollbar,
+    .dark ::-webkit-scrollbar{
+        width: 8px;
+        height: 8px;
+    }
+    /* trank */
+    ::-webkit-scrollbar-track{
+        background-color: #fff;
+    }
+    /* handle */
+    ::-webkit-scrollbar-thumb{
+        background: #ccc;
+    }
+    /* trank */
+    .dark ::-webkit-scrollbar-track{
+        background-color: #374151;
+    }
+}
